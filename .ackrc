@@ -1,0 +1,3 @@
+--ignore-case
+--pager=less -R
+--ignore-dir=coverage
