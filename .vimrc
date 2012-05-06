@@ -31,6 +31,7 @@ set showcmd
 set ruler
 set smarttab
 set sidescrolloff=5
+set hidden
 
 " powerline
 set nocompatible   " Disable vi-compatibility
@@ -38,6 +39,7 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 set t_Co=256       " Explicitly tell vim that the terminal supports 256 colors
 let g:Powerline_symbols='fancy'
+" }}}
 " maps{{{
 map ; :
 imap ii <C-[>
@@ -45,12 +47,10 @@ imap ii <C-[>
 nmap date :r!date +\%F<CR>
 nmap pass :r!apg -n 1<CR>
 
-nmap tt :tabnew<CR>
-nmap tq :tabclose<CR>
-nmap th :tabprev<CR>
-nmap tl :tabnext<CR>
-
-nmap ,dd :r! date +"\%a \%b \%d \%T \%Y"<CR>
+nnoremap <silent> // :Ack<SPACE>
+nnoremap <silent> oo :CtrlP<CR>
+nnoremap <silent> tt :TagbarToggle<CR>
+nnoremap bb :ls<CR>:buffer<Space>
 "}}}
 " autocmds {{{
 " highlight text that is @ >80 chars
@@ -85,7 +85,6 @@ Bundle 'gmarik/vundle'
 Bundle 'L9'
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'Command-T'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
@@ -96,4 +95,12 @@ Bundle 'gnupg'
 Bundle 'endwise.vim'
 Bundle 'herald.vim'
 Bundle 'tsaleh/vim-tmux'
+Bundle 'kien/tabman.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'ddollar/nerdcommenter'
+Bundle 'ervandew/supertab'
+Bundle 'Tabular'
+Bundle 'ctrlp.vim'
+Bundle 'majutsushi/tagbar'
 "}}}
+" vim:fdm=marker
