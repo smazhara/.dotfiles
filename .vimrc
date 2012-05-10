@@ -102,5 +102,8 @@ Bundle 'ervandew/supertab'
 Bundle 'Tabular'
 Bundle 'ctrlp.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'vimoutliner/vimoutliner'
 "}}}
 " vim:fdm=marker
